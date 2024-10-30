@@ -936,10 +936,9 @@ body.light hr.separator {
   z-index: 10;
 }
 
-.nav-nav{
-  z-index: 1;
+.ant alt{
+  font-size: 1rem;
 }
-
 .portfolio .slideshow figcaption h3 {
   text-transform: uppercase;
   padding: 10px 0 20px;
