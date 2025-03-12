@@ -19,7 +19,113 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- CSS Skin File -->
-    <link href="css/skins/yellow.css" rel="stylesheet">
+     <!-- CSS Skin File -->
+     <link href="css/skins/yellow.css" rel="stylesheet">
+
+   <style>
+    /********** Gloobal ***********/
+.portafolio{
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-top: -8px;
+ z-index: 1;
+ padding-bottom: 6rem;
+padding-top: 4rem;
+}
+
+.cuadros-cont{
+ overflow: hidden;
+ margin: 0 auto;
+ padding-right: 50px;
+ padding-left: 100px;
+}
+
+/********** Portafolio ***********/
+
+.galeria {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: auto auto; /* 2 filas, altura automática */
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagen-container{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.galeria img:hover {
+  opacity: .9;
+}
+
+.paginacion {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  background-color: #ffb400;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.paginacion button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.paginacion button:hover:not(:disabled) {
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  border-color: #ffb400;
+  color: #ffb400;
+}
+/* Ocultar imágenes después de las primeras 6 */
+.galeria img:nth-child(n + 7) {
+  display: none;
+}
+
+
+
+
+@media screen and (min-width:300px) and (max-width:850px) {
+
+  .portafolio{
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+  }
+  .cuadros-cont{
+    padding-right: 2rem;
+     padding-left: 2rem;
+}
+
+.galeria {
+  margin-top: -1.5rem!important;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+}
+}
+   </style>>
 
     <!-- Modernizr JS File -->
     <script src="js/modernizr.custom.js"></script>
@@ -88,683 +194,123 @@
 </section>
 <!-- Page Title Ends -->
 <!-- Main Content Starts -->
-<section class="main-content text-center revealator-slideup revealator-once revealator-delay1">
-    <div id="grid-gallery" class="container grid-gallery">
-        <!-- Portfolio Grid Starts -->
-        <section class="grid-wrap">
-            <ul class="row grid" >
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/trucapitals.png" alt="Portolio Image" />
-                        <div><span>TruCapitals</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/pw.png" alt="Portolio Image" />
-                        <div><span>Plankton Wallet</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/pn.png" alt="Portolio Image" />
-                        <div><span>Plankton News</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/favlash.png" alt="Portolio Image" />
-                        <div><span>Favlash Salón</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/luxedental.png" alt="Portolio Image" />
-                        <div><span>Luxe Dental</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/danyaargote.png" alt="Portolio Image" />
-                        <div><span>Danya Argote: Psicoterapia & Yoga</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/global-recruiters.png" alt="Portolio Image" />
-                        <div><span>Global Recruiters</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/coinase.png" alt="Portolio Image" />
-                        <div><span>Grupo Coinase</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                  <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/ciplastic.png" alt="Portolio Image" />
-                        <div><span>Ciplastic</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-                     <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/techmeol.png" alt="Portolio Image" />
-                        <div><span>Tech Meol</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
-
-                     <!-- Portfolio Item Starts -->
-                     <li>
-                        <figure>
-                            <img src="./assets/ixaya.png" alt="Portolio Image" />
-                            <div><span>Ixaya Residencial</span></div>
-                        </figure>
-                    </li>
-                    <!-- Portfolio Item Ends -->
-
-                         <!-- Portfolio Item Starts -->
-                <li>
-                    <figure>
-                        <img src="./assets/gruastowing.png" alt="Portolio Image" />
-                        <div><span>Grüas Cervantes Towing</span></div>
-                    </figure>
-                </li>
-                <!-- Portfolio Item Ends -->
 
 
-                     <!-- Portfolio Item Starts -->
-                     <li>
-                        <figure>
-                            <img src="./assets/mudanzas.png" alt="Portolio Image" />
-                            <div><span>Mudanzas Hemorsillo</span></div>
-                        </figure>
-                    </li>
-                    <!-- Portfolio Item Ends -->
-                    
-                     <!-- Portfolio Item Starts -->
-                     <li>
-                        <figure>
-                            <img src="./assets/madeiras.png" alt="Portolio Image" />
-                            <div><span>Madeiras Collection</span></div>
-                        </figure>
-                    </li>
-                    <!-- Portfolio Item Ends -->
+<section class="portafolio" id="proyectos">
+    <div class="cuadros-cont">
 
-                          <!-- Portfolio Item Starts -->
-                          <li>
-                            <figure>
-                                <img src="./assets/gallery.png" alt="Portolio Image" />
-                                <div><span>The Grill Gallery</span></div>
-                            </figure>
-                        </li>
-                        <!-- Portfolio Item Ends -->
+  
+        <!-- <div class="carrusel-contenedor">
+          <div class="scroll-container">
+            <img src={myImageP.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP2.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP3.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP4.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP5.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP6.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP7.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP8.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP9.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP10.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP11.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP12.src} alt="desarrollo web" width="80%" class="port-img"/>
+            <img src={myImageP13.src} alt="desarrollo web" width="80%" class="port-img"/>
+          </div>
+        </div>-->
+  
+        <div class="galeria">
+            <a href=http://favlash.com/" target="_blank">
+          <img src="img/nuevas/1.png" alt="desarrollo web" width="80%" class="visible"/>
+            </a>
 
-                          <!-- Portfolio Item Starts -->
-                          <li>
-                            <figure>
-                                <img src="./assets/iboga.png" alt="Portolio Image" />
-                                <div><span>Iboga Wellnes Clinic</span></div>
-                            </figure>
-                        </li>
-                        <!-- Portfolio Item Ends -->
+            <a href=https://luxedentaltj.com/" target="_blank">
+          <img src="img/nuevas/2.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
 
-                          <!-- Portfolio Item Starts -->
-                          <li>
-                            <figure>
-                                <img src="./assets/larecta.png" alt="Portolio Image" />
-                                <div><span>La Recta Coworking</span></div>
-                            </figure>
-                        </li>
-                        <!-- Portfolio Item Ends -->
+             <a href="https://danyaargote.com/" target="_blank">
+          <img src="img/nuevas/3.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
 
-                             <!-- Portfolio Item Starts -->
-                             <li>
-                                <figure>
-                                    <img src="./assets/bajabox.png" alt="Portolio Image" />
-                                    <div><span>Baja Box</span></div>
-                                </figure>
-                            </li>
-                            <!-- Portfolio Item Ends -->
+             <a href="https://global-recruiters.com/" target="_blank">
+          <img src="img/nuevas/4.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
 
-                           <!-- Portfolio Item Starts -->
-                           <li>
-                            <figure>
-                                <img src="./assets/dashboard.png" alt="Portolio Image" />
-                                <div><span>Dashboard Analytics</span></div>
-                            </figure>
-                        </li>
-                        <!-- Portfolio Item Ends -->
-            </ul>
-        </section>
-        <!-- Portfolio Grid Ends -->
-        <!-- Portfolio Details Starts -->
-        <section class="slideshow">
-            <ul style="z-index: 10!important;">
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-12 col-sm-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-12 col-sm-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">TruCapitals</span>
-                                </div>
-                                <div class="col-12 col-sm-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                </div>
-                                <div class="col-12 col-sm-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://www.trucapitals.com/" target="_blank">https://www.trucapitals.com/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-                    
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends -->
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Biso Digital</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://plankton.mx/" target="_blank">https://plankton.mx/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends -->
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Biso Digital</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, ASTRO, Figma</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://plankton.news/" target="_blank">https://plankton.news/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
+             <a href="https://coinase.mx/" target="_blank">
+          <img src="img/nuevas/5.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
 
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends -->
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">FavLash</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://favlash.com/" target="_blank">https://favlash.com/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends -->
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Luxe Dental</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://luxedentaltj.com/" target="_blank">https://luxedentaltj.com/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
+             <a href="http://ciplastic.com/" target="_blank">
+                <img src="img/nuevas/6.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://www.techmeol.com/" target="_blank">
+          <img src="img/nuevas/7.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
 
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends -->
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Psicologa Danya Argote</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://danyaargote.com/" target="_blank">https://danyaargote.com/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends -->
-                
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Global Recruiters</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://global-recruiters.com/" target="_blank">https://global-recruiters.com/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends -->
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Grupo Coinase</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://coinase.mx/" target="_blank">https://coinase.mx/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-                        
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends -->
-                
-                <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Ciplastic</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress, Figma</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://ciplastic.com/" target="_blank">https://ciplastic.com/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends --> 
-                
-                 <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Tech Meol</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Squarespace</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://techmeol.com/" target="_blank">https://techmeol.com/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends --> 
-
-
-                                                    <!-- Portfolio Item Detail Starts -->
-                                                    <li>
-                                                        <figure>
-                                                            <!-- Project Details Starts -->
-                                                            <figcaption>
-                                                                <h3>Detalles del proyecto</h3>
-                                                                <div class="row open-sans-font">
-                                                                    <div class="col-6 mb-2">
-                                                                        <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                                                    </div>
-                                                                    <div class="col-6 mb-2">
-                                                                        <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Ixaya Residencial</span>
-                                                                    </div>
-                                                                    <div class="col-6 mb-2">
-                                                                        <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress, Figma</span>
-                                                                    </div>
-                                                                    <div class="col-6 mb-2">
-                                                                        <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://ixayaresidencial.mx/" target="_blank">https://ixayaresidencial.mx/</a></span>
-                                                                    </div>
-                                                                </div>
-                                                            </figcaption>
-                                                            <!-- Project Details Ends -->
-                                                        </figure>
-                                                    </li>
-                                                    <!-- Portfolio Item Detail Ends --> 
-
-                                                    
-                                    <!-- Portfolio Item Detail Starts -->
-                <li>
-                    <figure>
-                        <!-- Project Details Starts -->
-                        <figcaption>
-                            <h3>Detalles del proyecto</h3>
-                            <div class="row open-sans-font">
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Grüas Cervantes Towing</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://gruascervantestijuana.com/" target="_blank">https://gruascervantestijuana.com/</a></span>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <!-- Project Details Ends -->
-                    </figure>
-                </li>
-                <!-- Portfolio Item Detail Ends --> 
-
-
-
-                                          <!-- Portfolio Item Detail Starts -->
-                                          <li>
-                                            <figure>
-                                                <!-- Project Details Starts -->
-                                                <figcaption>
-                                                    <h3>Detalles del proyecto</h3>
-                                                    <div class="row open-sans-font">
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Mudanzas Hermosillo</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress, Figma</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://mudanzashermosillo.com.mx/" target="_blank">https://mudanzashermosillo.com.mx/</a></span>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                                <!-- Project Details Ends -->
-                                            </figure>
-                                        </li>
-                                        <!-- Portfolio Item Detail Ends --> 
-
-                                           <!-- Portfolio Item Detail Starts -->
-                                           <li>
-                                            <figure>
-                                                <!-- Project Details Starts -->
-                                                <figcaption>
-                                                    <h3>Detalles del proyecto</h3>
-                                                    <div class="row open-sans-font">
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Madeiras Collection</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://madeirascollection.com/" target="_blank">https://madeirascollection.com/</a></span>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                                <!-- Project Details Ends -->
-                                            </figure>
-                                        </li>
-                                        <!-- Portfolio Item Detail Ends --> 
-
-                                        <li>
-                                            <figure>
-                                                <!-- Project Details Starts -->
-                                                <figcaption>
-                                                    <h3>Detalles del proyecto</h3>
-                                                    <div class="row open-sans-font">
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">The Grill Gallery</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress, Figma</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="http://thegrillgallery.com/" target="_blank">http://thegrillgallery.com/</a></span>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                                <!-- Project Details Ends -->
-                                            </figure>
-                                        </li>
-                                        <!-- Portfolio Item Detail Ends --> 
-
-
-                                        <li>
-                                            <figure>
-                                                <!-- Project Details Starts -->
-                                                <figcaption>
-                                                    <h3>Detalles del proyecto</h3>
-                                                    <div class="row open-sans-font">
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Iboga Wellness Clinic</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress, Figma</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://ibogawellnessclinic.com/" target="_blank">https://ibogawellnessclinic.com/</a></span>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                                <!-- Project Details Ends -->
-                                            </figure>
-                                        </li>
-                                        <!-- Portfolio Item Detail Ends --> 
-
-                                        <li>
-                                            <figure>
-                                                <!-- Project Details Starts -->
-                                                <figcaption>
-                                                    <h3>Detalles del proyecto</h3>
-                                                    <div class="row open-sans-font">
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">La Recta Coworking</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress, Figma</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="http://larectacoworking.com/" target="_blank">http://larectacoworking.com/</a></span>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                                <!-- Project Details Ends -->
-                                            </figure>
-                                        </li>
-                                        <!-- Portfolio Item Detail Ends --> 
-
-                                        <li>
-                                            <figure>
-                                                <!-- Project Details Starts -->
-                                                <figcaption>
-                                                    <h3>Detalles del proyecto</h3>
-                                                    <div class="row open-sans-font">
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">Website</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Baja Box</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">HTML, CSS, Javascript, Wordpress, Figma</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://bajabox.com.mx/" target="_blank">https://bajabox.com.mx/</a></span>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                                <!-- Project Details Ends -->
-                                            </figure>
-                                        </li>
-                                        <!-- Portfolio Item Detail Ends --> 
-
-                                        <li>
-                                            <figure>
-                                                <!-- Project Details Starts -->
-                                                <figcaption>
-                                                    <h3>Detalles del proyecto</h3>
-                                                    <div class="row open-sans-font">
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-file-text-o pr-2"></i><span class="project-label">Tipo </span>: <span class="ft-wt-600 uppercase">web App</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-user-o pr-2"></i><span class="project-label">Cliente </span>: <span class="ft-wt-600 uppercase">Proyecto de práctica</span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-code pr-2"></i><span class="project-label">Lenguajes </span>: <span class="ft-wt-600 uppercase">React, Api Google Speed, Google Looker Studio  </span>
-                                                        </div>
-                                                        <div class="col-6 mb-2">
-                                                            <i class="fa fa-external-link pr-2"></i><span class="project-label">Enlace </span>: <span class="ft-wt-600 uppercase"><a href="https://analytics-demov1.netlify.app/" target="_blank">https://analytics-demov1.netlify.app/</a></span>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                                <!-- Project Details Ends -->
-                                            </figure>
-                                        </li>
-                                        <!-- Portfolio Item Detail Ends --> 
-            </ul>
-            <!-- Portfolio Navigation Starts -->
-            <nav class="nav-nav">
-                <span class="icon nav-prev"><img src="" alt="Anterior" width="3%" height="3%" class="ant"></span>
-                <span class="icon nav-next"><img src="" alt="Siguiente" width="3%" height="3%" class="sig"></span>
-                <span class="nav-close"><img src="./assets/cerrar.png" alt="close" width="2%" height="2%"></span>
-            </nav>
-            <!-- Portfolio Navigation Ends -->
-        </section>
-    </div>
-</section>
+             <a href="https://ixayaresidencial.mx/" target="_blank">
+                <img src="img/nuevas/8.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://gruascervantestijuana.com/" target="_blank">
+                <img src="img/nuevas/9.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://mudanzashermosillo.com.mx/" target="_blank">
+                <img src="img/nuevas/10.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://madeirascollection.com" target="_blank">
+                <img src="img/nuevas/11.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://thegrillgallery.com/" target="_blank">
+                <img src="img/nuevas/12.png"alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://ibogawellnessclinic.com/" target="_blank">
+                <img src="img/nuevas/13.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://integratj.com.mx/" target="_blank">
+                <img src="img/nuevas/14.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://ppsolutions.com.mx/" target="_blank">
+                <img src="img/nuevas/15.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="http://clidpay.us/" target="_blank">
+                <img src="img/nuevas/16.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+         
+             <a href="https://snitchagency.com/" target="_blank">
+                <img src="img/nuevas/17.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://bajabox.com.mx/" target="_blank">
+                <img src="img/nuevas/18.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://gynandmed.com/" target="_blank">
+                <img src="img/nuevas/19.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+             <a href="https://larectacoworking.com/" target="_blank">
+                <img src="img/nuevas/20.png" alt="desarrollo web" width="80%" class="port-img"/>
+             </a>
+          
+          </div>
+  
+      <div class="paginacion">
+          <button id="anterior" disabled>Anterior</button>
+          <button id="siguiente">Siguiente</button>
+      </div>
+  
+  </div>
+  
+  
+  </section>
+  
 <!-- Main Content Ends -->
 
 
@@ -781,6 +327,61 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
 
+<script>
+const galeria = document.querySelector('.galeria');
+const btnAnterior = document.getElementById('anterior');
+const btnSiguiente = document.getElementById('siguiente');
+const enlaces = galeria.querySelectorAll('a'); // Selecciona todos los <a>
+const imagenesPorPagina = 6;
+let paginaActual = 1;
+
+function mostrarImagenes() {
+    const inicio = (paginaActual - 1) * imagenesPorPagina;
+    const fin = inicio + imagenesPorPagina;
+
+    enlaces.forEach((enlace, index) => {
+        if (index >= inicio && index < fin) {
+            enlace.style.display = 'block';
+        } else {
+            enlace.style.display = 'none';
+        }
+    });
+
+    btnAnterior.disabled = paginaActual === 1;
+    btnSiguiente.disabled = fin >= enlaces.length;
+}
+
+// Event listener para los enlaces
+enlaces.forEach((enlace, index) => {
+  enlace.addEventListener('click', (event) => {
+  
+
+    // Calcula la página a la que corresponde esta imagen
+    const nuevaPagina = Math.floor(index / imagenesPorPagina) + 1;
+
+    // Si la imagen no está en la página actual, cambia a esa página
+    if (nuevaPagina !== paginaActual) {
+      paginaActual = nuevaPagina;
+      mostrarImagenes();
+    }
+    // Opcional:  Aquí podrías añadir otra acción (abrir un modal, etc.)
+  });
+});
+
+btnAnterior.addEventListener('click', () => {
+    paginaActual--;
+    mostrarImagenes();
+});
+
+btnSiguiente.addEventListener('click', () => {
+    paginaActual++;
+    mostrarImagenes();
+});
+
+mostrarImagenes(); // Llama a la función para mostrar la página inicial
+</script>
 </body>
 
 </html>
+
+
